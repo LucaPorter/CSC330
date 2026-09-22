@@ -1,5 +1,5 @@
 (*
-Part 1 of problem 1: Takes 2 dates and returns true if the first is earlier than the second
+Pt. 1, Problem 1: Takes 2 dates and returns true if the first is earlier than the second
   returns: bool
 *)
 let is_older ((date1 : int * int * int), (date2 : int * int * int)) : bool =
@@ -10,7 +10,7 @@ let is_older ((date1 : int * int * int), (date2 : int * int * int)) : bool =
   else c1 < c2 ;;
 
 (*
-Part 2 of problem 1: Takes a year and month as input and returns the number of days in the month
+Pt. 2, Problem 1: Takes a year and month as input and returns the number of days in the month
   returns: int option
 *)
 let days_in_month ((a : int), (b : int)) : int option =
@@ -21,7 +21,7 @@ let days_in_month ((a : int), (b : int)) : int option =
   else None;;
 
 (*
-  Part 3 of problem 1: Takes a year and month and finds all possible dates in that month
+  Pt. 3, Problem 1: Takes a year and month and finds all possible dates in that month
     returns: (int * int * int) list option
 *)
 let dates_in_month ((a : int), (b : int)) : (int * int * int) list option =
@@ -36,7 +36,8 @@ let dates_in_month ((a : int), (b : int)) : (int * int * int) list option =
     Some (build_string 1);;
 
 (*
-  Part 4 of Problem 1:
+  Pt. 4, Problem 1:
+    returns: int option
 *)
 let num_of_days ((a : int), (b : int), (c : int)) : int option =
   let rec sum_before_current_month (year : int) (month : int) (current_month : int) : int =
@@ -51,7 +52,7 @@ let num_of_days ((a : int), (b : int), (c : int)) : int option =
   else Some (sum_before_current_month a 1 b + c);;
 
 (*
-  Part 5 of Problem 1:
+  Pt. 5, Problem 1: Given a year and 
 *)
 let nth_day ((year : int), (n : int)) : (int * int * int) option =
   let rec sum_until_found_month (year : int) (n : int) (current_month : int) (sum : int) : (int * int) =
